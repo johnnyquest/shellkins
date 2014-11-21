@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+#	mr
+#
+#	Batch render mantra .ifd files.
+#	Usage:
+#
+#	mr <ifd file pattern> [<mantra render arguments>]
+#
+#	The file pattern should be quoted if it contains wildcards, e.g. 'test.*.ifd'
+#
+#	Example render arguments:
+#
+#		...
+#
+#
+
+
+if (( $# < 1 )); then
+	echo "Usage: $0 <mantra .ifd file pattern> [<options>]"
+	exit 1
+fi
+
+IFD_FILES=$1
+IFD_OPTIONS=$2
+LOGFILE=./mantra.log
+
+
+echo >>$LOGFILE -e "\n\nRendering files: " $IFD_FILES
+echo >>$LOGFILE -e "Started at (" `date` ")\n"
+
+ls -1 $1 | gawk '{ print "mantra -V2a -f " $0 }' | bash | gawk '{ print strftime("[%Y-%m-%d %H:%M.%S]"), $0; fflush(); }' | tee -a $LOGFILE
+
+
+#hbatch <$CMDFILE 2>&1 $HIPFILE | gawk '{ print strftime("[%Y-%m-%d %H:%M.%S]"), $0; fflush(); }' | tee `basename $HIPFILE .hip`_`date +%m%d%H%M`.log
+
+
+
