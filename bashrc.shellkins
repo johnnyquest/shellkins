@@ -37,7 +37,7 @@ HOUDINI=/opt/hfs
 
 # [EDITABLE] aliases (app shortcuts)
 #
-alias nuke=/opt/Nuke6.3v4/Nuke6.3
+#alias nuke=/opt/Nuke6.3v4/Nuke6.3
 	# (run nuke)
 alias h14='pushd . && cd /opt/hfs14 && source houdini_setup_bash && popd && hmaster'
 	# (init its env and run h14 beta)
@@ -56,7 +56,8 @@ alias l1='ls -1'
 alias ll='ls -l'
 alias lll='ls -l *.log'
 
-
+alias push='pushd .'
+alias pop='popd'
 
 
 
