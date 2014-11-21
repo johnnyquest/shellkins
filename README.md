@@ -12,7 +12,7 @@ General:
 
 - quickly open a folder in the default file manager app
 
-- (TODO) find a project folder specified by a "lazy path" and go (cd) there
+- find a project folder specified by a "lazy path" and go (cd) there
 
 - convert a Windows path string on the clipboard to a Linux one
   (slash turning)
