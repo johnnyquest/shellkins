@@ -31,4 +31,19 @@ Functions include:
 	- (TODO) Houdini .hip equivalents of: ls (list), du (disk usage)
 
 
+	Misc:
+
+	- a bashrc config file (to be sourced from .bashrc)
+
+
+
+
+Available commands/aliases:
+
+
+cdto
+cdback
+f
+
+
 

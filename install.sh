@@ -21,6 +21,8 @@ echo '---'
 
 mkdir -pv $DEST
 
+ln -sfv $SRC/gen/cd-lazy.sh $DEST/cd-lazy
+
 ln -sfv $SRC/bashrc.shellkins $DEST/bashrc.shellkins
 echo '---'
 

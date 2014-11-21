@@ -7,6 +7,11 @@
 #		@brief		Own ...
 #
 #
+#				Add the following to your ~/.bashrc file:
+#
+#				source ~/bin/bashrc.shellkins
+#
+#
 echo SHELLKINS \* \[`date`\]
 
 
@@ -47,8 +52,6 @@ alias dev='cd ~/work/dev'
 
 # [EDITABLE] aliases (general)
 #
-alias f='xdg-open'
-
 alias l1='ls -1'
 alias ll='ls -l'
 alias lll='ls -l *.log'
@@ -59,6 +62,11 @@ alias lll='ls -l *.log'
 
 # ---- do not edit below this line if possible ----
 
+# aliases (shellkins commands)
+#
+alias cdto='. cd-lazy'
+alias cdback='cd $SHELLKINS_PREV_DIR && unset SHELLKINS_PREV_DIR'
+alias f='xdg-open'
 
 # init houdini env
 #
