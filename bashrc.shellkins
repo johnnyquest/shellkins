@@ -1,0 +1,83 @@
+#
+#		@file		bashrc.shellkins
+#		@author		xy
+#
+#		@since		2014-11-21
+#
+#		@brief		Own ...
+#
+#
+echo SHELLKINS \* \[`date`\]
+
+
+# [EDITABLE] variables local to this file
+#
+HOUDINI=/opt/hfs
+
+
+
+
+# [EDITABLE] variable exports and such
+#
+#export PATH=/opt/Arnold/bin:$PATH
+	# arnold
+
+#export GOROOT=~/Apps/go
+#export GOBIN=$GOROOT/bin
+#export PATH=$GOBIN:$PATH
+	# go
+
+
+
+
+# [EDITABLE] aliases (app shortcuts)
+#
+alias nuke=/opt/Nuke6.3v4/Nuke6.3
+	# (run nuke)
+alias h14='pushd . && cd /opt/hfs14 && source houdini_setup_bash && popd && hmaster'
+	# (init its env and run h14 beta)
+
+
+# [EDITABLE] aliases (location shortcuts)
+#
+alias chiark='ssh jernau@chiark'
+alias h13t='cd ~/work/gfx/h13test'
+alias dev='cd ~/work/dev'
+
+
+# [EDITABLE] aliases (general)
+#
+alias f='xdg-open'
+
+alias l1='ls -1'
+alias ll='ls -l'
+alias lll='ls -l *.log'
+
+
+
+
+
+# ---- do not edit below this line if possible ----
+
+
+# init houdini env
+#
+if [ -d "$HOUDINI" ]; then
+	pushd . >/dev/null
+	cd $HOUDINI
+	source ./houdini_setup_bash
+	popd >/dev/null
+else
+	echo "($HOUDINI not found)"
+fi
+echo '---'
+
+# show all aliases
+alias
+echo '---'
+
+# show free space
+df -h
+echo '---'
+
+
