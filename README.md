@@ -1,39 +1,36 @@
 shellkins
 =========
 
-bunch of command-line tools, (vfx) productivity
-
-
+A random bunch of command-line tools for (VFX) productivity.
 
 Uses bash as shell.
 
 
+Functions include --
 
-Functions include:
+General:
 
-	General:
+- quickly open a folder in the default file manager app
 
-	- quickly open a folder in the default file manager app
+- (TODO) find a project folder specified by a "lazy path" and go (cd) there
 
-	- (TODO) find a project folder specified by a "lazy path" and go (cd) there
-
-	- convert a Windows path string on the clipboard to a Linux one
-	  (slash turning)
-
-
-	Houdini:
-
-	- open an image sequence in MPlay by specifying a single file
-	  (auto-detection of frame range)
-
-	- runs any ROP as a batch process, with all outputs timestamped and logged
-
-	- (TODO) Houdini .hip equivalents of: ls (list), du (disk usage)
+- convert a Windows path string on the clipboard to a Linux one
+  (slash turning)
 
 
-	Misc:
+Houdini:
 
-	- a bashrc config file (to be sourced from .bashrc)
+- open an image sequence in MPlay by specifying a single file
+  (auto-detection of frame range)
+
+- runs any ROP as a batch process, with all outputs timestamped and logged
+
+- (TODO) Houdini .hip equivalents of: ls (list), du (disk usage)
+
+
+Misc:
+
+- a bashrc config file (to be sourced from .bashrc)
 
 
 
@@ -41,9 +38,9 @@ Functions include:
 Available commands/aliases:
 
 
-cdto
-cdback
-f
+	cdto
+	cdback
+	f
 
 
 
